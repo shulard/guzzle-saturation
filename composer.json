@@ -1,0 +1,13 @@
+{
+    "name": "shulard/guzzle-saturation",
+    "description": "Test of socket saturation via guzzle",
+    "require": {
+        "guzzle/guzzle": "3.8.*"
+    },
+    "authors": [
+        {
+            "name": "Stephane HULARD",
+            "email": "s.hulard@chstudio.fr"
+        }
+    ]
+}
