@@ -15,6 +15,8 @@ For this project I use [Guzzle](http://guzzlephp.org/) as my favourite PHP Clien
 
 I create this repo to present the problem and illustrate with some stats.
 
+We have built a new HTTP client specifically built around this problem: [bee4/httpclient](http://github.com/bee4/httpclient/)
+
 ## Licence
 
 Copyright (c) 2013 **Stéphane HULARD**
