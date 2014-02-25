@@ -3,20 +3,61 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ecd56268df31b1ef3ff5ac7aa7b2793a",
+    "hash": "d35c33b3df3f9f152adac080647049ab",
     "packages": [
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.8.0",
+            "name": "bee4/httpclient",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69"
+                "url": "https://github.com/bee4/httpclient.git",
+                "reference": "d1f31403c116cd397fdf8a5065eedfec3710dd30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
+                "url": "https://api.github.com/repos/bee4/httpclient/zipball/d1f31403c116cd397fdf8a5065eedfec3710dd30",
+                "reference": "d1f31403c116cd397fdf8a5065eedfec3710dd30",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bee4": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Stéphane HULARD",
+                    "email": "s.hulard@chstudio.fr"
+                }
+            ],
+            "description": "A simple chainable HTTP client. Built for intensive HTTP calls!",
+            "time": "2014-01-29 09:58:41"
+        },
+        {
+            "name": "guzzle/guzzle",
+            "version": "v3.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
                 "shasum": ""
             },
             "require": {
@@ -54,8 +95,8 @@
                 "phpunit/phpunit": "3.7.*",
                 "psr/log": "1.0.*",
                 "symfony/class-loader": "*",
-                "zendframework/zend-cache": "2.0.*",
-                "zendframework/zend-log": "2.0.*"
+                "zendframework/zend-cache": "<2.3",
+                "zendframework/zend-log": "<2.3"
             },
             "type": "library",
             "extra": {
@@ -65,8 +106,8 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Guzzle\\Tests": "tests/",
-                    "Guzzle": "src/"
+                    "Guzzle": "src/",
+                    "Guzzle\\Tests": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -95,21 +136,21 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-12-05 23:39:20"
+            "time": "2014-01-28 22:29:15"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.4.0",
+            "version": "v2.4.2",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e"
+                "reference": "4708b8cd41984a5ba29fe7dd40716f7f761ac501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
-                "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/4708b8cd41984a5ba29fe7dd40716f7f761ac501",
+                "reference": "4708b8cd41984a5ba29fe7dd40716f7f761ac501",
                 "shasum": ""
             },
             "require": {
@@ -140,7 +181,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -149,7 +192,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-03 14:52:22"
+            "time": "2014-02-11 13:52:09"
         }
     ],
     "packages-dev": [
@@ -159,9 +202,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "bee4/httpclient": 20
+    },
     "platform": [
 
     ],
