@@ -2,8 +2,8 @@
     "name": "shulard/guzzle-saturation",
     "description": "Test of socket saturation via guzzle",
     "require": {
-        "guzzle/guzzle": "3.8.*",
-        "bee4/httpclient": "dev-master"
+        "guzzle/guzzle": "dev-guzzle4",
+        "bee4/httpclient": "v0.0.1"
     },
     "authors": [
         {

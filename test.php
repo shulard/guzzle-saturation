@@ -30,8 +30,8 @@ try {
 	$i = 0;
 	$memory = -1;
 	while( $i < $limit ) {
-		$client = new Guzzle\Http\Client();
-		$client->get($url)->send();
+		$client = new GuzzleHttp\Client();
+		$client->get($url);
 		$i++;
 
 		$tmp = memory_get_usage(true);
@@ -53,9 +53,9 @@ $start = microtime(true);
 try {
 	$i = 0;
 	$memory = -1;
-	$client = new Guzzle\Http\Client();
+	$client = new GuzzleHttp\Client();
 	while( $i < $limit ) {
-		$client->get($url)->send();
+		$client->get($url);
 		$i++;
 
 		$tmp = memory_get_usage(true);
@@ -77,10 +77,10 @@ $start = microtime(true);
 try {
 	$i = 0;
 	$memory = -1;
-	$client = new Guzzle\Http\Client();
-	$request = $client->get($url);
+	$client = new GuzzleHttp\Client();
+	$request = $client->createRequest('GET', $url);
 	while( $i < $limit ) {
-		$request->send();
+		$client->send($request);
 		$i++;
 
 		$tmp = memory_get_usage(true);
