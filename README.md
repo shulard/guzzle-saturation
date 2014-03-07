@@ -9,11 +9,14 @@ On a server, I receive an error about cURL which can't assign the request addres
 [curl] 7: Failed to connect to 127.0.0.1: Can't assign requested address [url] http://127.0.0.1:9200
 ````
 
-This error was thrown directly by the PHP cURL extension and not by my code... After some search, I found that it is possible my code take all socket possibilities on the system and then the error appear.
+This error is thrown directly by the PHP cURL extension...
+After some research, the only explanation was that my process saturate curl handle construction, then PHP just broke up...
 
 For this project I use [Guzzle](http://guzzlephp.org/) as my favourite PHP Client but it seems to have a little problem with a lot of quick calls...
 
 I create this repo to present the problem and illustrate with some stats.
+
+We have built a new HTTP client specifically built around this problem: [bee4/httpclient](http://github.com/bee4/httpclient/)
 
 ## Licence
 

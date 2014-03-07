@@ -3,7 +3,7 @@
 require "vendor/autoload.php";
 
 $url = "http://127.0.0.1:9200";
-$limit = 50000;
+$limit = 200000;
 if( $argc > 1 ) {
 	$args = [];
 	array_shift($argv);
